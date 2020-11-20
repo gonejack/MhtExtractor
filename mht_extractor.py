@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import os
 import email
 import argparse
@@ -36,7 +37,7 @@ class Extractor:
             if content_type.startswith('multipart'):
                 continue
 
-            #TODO: using legacy api
+            # TODO: using legacy api
             self._write(name, part.get_payload(decode=True))
 
     def _write(self, name, content):
